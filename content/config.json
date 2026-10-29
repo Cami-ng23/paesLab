@@ -1,0 +1,12 @@
+{
+ "pass_pct": 0.8,
+ "n_diagnostico": 5,
+ "n_practica": 5,
+ "n_evaluacion": 10,
+ "n_repaso": 5,
+ "review_days": [
+  1,
+  3,
+  7
+ ]
+}

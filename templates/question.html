@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% block c %}
+<span class="mut">{{ u.id }} · {{ MODES[z.mode] }} · pregunta {{ z.pos+1 }} de {{ n }}</span><div class="pitch"><i style="left:{{ 4+92*z.pos/n }}%">⚽</i><span>🥅</span></div>
+<span class="tag">Ejercicio original de práctica</span> <span class="tag">{{ p.skill }}</span>
+<div class="q">{{ p.text }}</div>
+{% if msg %}<div class="msg {{ msg[0] }}">{{ msg[1] }}</div>{% endif %}
+{% for h in hints %}<div class="hint">Pista {{ loop.index }}: {{ h }}</div>{% endfor %}
+<form method="post" action="{{ url_for('answer') }}"><label class="mut" for="a">Tu respuesta final (resuelve primero en tu cuaderno)</label><input id="a" name="a" type="text" autocomplete="off" autofocus required>
+<div class="row"><button>Responder</button></div></form>
+{% if z.mode=='practica' %}<form class="row" method="post"><button class="alt" formaction="{{ url_for('hint') }}" {{ 'disabled' if z.hints>=p.hints|length }}>Pedir pista</button><button class="alt" formaction="{{ url_for('giveup') }}">Ver solución</button></form>{% endif %}
+{% endblock %}

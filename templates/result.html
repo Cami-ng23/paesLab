@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block c %}
+<div class="final"><big>{{ '¡GOLAZO, CAMILO!' if passed else '🟨 Tarjeta amarilla' }}</big><div class="marcador">CAMILO {{ score }} – {{ total-score }} PAES</div>
+<p class="mut">{{ MODES[mode] }} · {{ 'Alcanzaste el mínimo (solo cuentan respuestas correctas sin pistas).' if passed else 'No alcanzaste el mínimo. Revisa cada error, que ahí está el aprendizaje, y vuelve con variantes nuevas.' }}</p></div>
+{% for x in rows %}<div class="card" style="margin:10px 0"><span class="tag {{ 'good' if x.r.ok and not x.r.hints else 'warn' }}">{{ 'Correcta' if x.r.ok and not x.r.hints else 'Correcta con ayuda' if x.r.ok else 'Incorrecta' }}</span>
+<div class="q">{{ x.p.text }}</div><div class="mut">Tu respuesta: {{ x.r.user or '—' }}</div><div>Solución: {{ x.p.sol }}</div></div>{% endfor %}
+<a class="btn" href="{{ url_for('unit', uid=u.id) }}">Volver a la unidad</a>{% endblock %}

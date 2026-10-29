@@ -1,0 +1,236 @@
+[
+ {
+  "id": "M1-N1",
+  "name": "Enteros y racionales",
+  "route": "M1",
+  "axis": "Números",
+  "prereqs": []
+ },
+ {
+  "id": "M1-N2",
+  "name": "Porcentaje",
+  "route": "M1",
+  "axis": "Números",
+  "prereqs": []
+ },
+ {
+  "id": "M1-N3",
+  "name": "Potencias y raíces enésimas",
+  "route": "M1",
+  "axis": "Números",
+  "prereqs": []
+ },
+ {
+  "id": "M1-A1",
+  "name": "Expresiones algebraicas",
+  "route": "M1",
+  "axis": "Álgebra y funciones",
+  "prereqs": []
+ },
+ {
+  "id": "M1-A2",
+  "name": "Proporcionalidad",
+  "route": "M1",
+  "axis": "Álgebra y funciones",
+  "prereqs": []
+ },
+ {
+  "id": "M1-A3",
+  "name": "Ecuaciones e inecuaciones de primer grado",
+  "route": "M1",
+  "axis": "Álgebra y funciones",
+  "prereqs": []
+ },
+ {
+  "id": "M1-A4",
+  "name": "Sistemas de ecuaciones lineales 2x2",
+  "route": "M1",
+  "axis": "Álgebra y funciones",
+  "prereqs": []
+ },
+ {
+  "id": "M1-A5",
+  "name": "Función lineal y afín",
+  "route": "M1",
+  "axis": "Álgebra y funciones",
+  "prereqs": []
+ },
+ {
+  "id": "M1-A6",
+  "name": "Función cuadrática",
+  "route": "M1",
+  "axis": "Álgebra y funciones",
+  "prereqs": []
+ },
+ {
+  "id": "M1-G1",
+  "name": "Figuras geométricas",
+  "route": "M1",
+  "axis": "Geometría",
+  "prereqs": []
+ },
+ {
+  "id": "M1-G2",
+  "name": "Cuerpos geométricos",
+  "route": "M1",
+  "axis": "Geometría",
+  "prereqs": []
+ },
+ {
+  "id": "M1-G3",
+  "name": "Transformaciones isométricas",
+  "route": "M1",
+  "axis": "Geometría",
+  "prereqs": []
+ },
+ {
+  "id": "M1-G4",
+  "name": "Semejanza y proporcionalidad de figuras",
+  "route": "M1",
+  "axis": "Geometría",
+  "prereqs": []
+ },
+ {
+  "id": "M1-P1",
+  "name": "Representación de datos en tablas y gráficos",
+  "route": "M1",
+  "axis": "Probabilidad y estadística",
+  "prereqs": []
+ },
+ {
+  "id": "M1-P2",
+  "name": "Medidas de posición",
+  "route": "M1",
+  "axis": "Probabilidad y estadística",
+  "prereqs": []
+ },
+ {
+  "id": "M1-P3",
+  "name": "Reglas de las probabilidades",
+  "route": "M1",
+  "axis": "Probabilidad y estadística",
+  "prereqs": []
+ },
+ {
+  "id": "M2-N1",
+  "name": "Conjunto de los números reales",
+  "route": "M2",
+  "axis": "Números",
+  "prereqs": []
+ },
+ {
+  "id": "M2-N2",
+  "name": "Matemática financiera",
+  "route": "M2",
+  "axis": "Números",
+  "prereqs": [
+   "M1-N2"
+  ]
+ },
+ {
+  "id": "M2-N3",
+  "name": "Logaritmos",
+  "route": "M2",
+  "axis": "Números",
+  "prereqs": [
+   "M1-N3"
+  ]
+ },
+ {
+  "id": "M2-A1",
+  "name": "Sistemas 2x2: tipos de solución",
+  "route": "M2",
+  "axis": "Álgebra y funciones",
+  "prereqs": []
+ },
+ {
+  "id": "M2-A2",
+  "name": "Función potencia, exponencial y logarítmica",
+  "route": "M2",
+  "axis": "Álgebra y funciones",
+  "prereqs": [
+   "M2-N3",
+   "M1-A5",
+   "M1-A6"
+  ]
+ },
+ {
+  "id": "M2-A3",
+  "name": "Funciones seno y coseno",
+  "route": "M2",
+  "axis": "Álgebra y funciones",
+  "prereqs": [
+   "M2-G2"
+  ]
+ },
+ {
+  "id": "M2-G1",
+  "name": "Homotecia de figuras planas",
+  "route": "M2",
+  "axis": "Geometría",
+  "prereqs": []
+ },
+ {
+  "id": "M2-G2",
+  "name": "Razones trigonométricas",
+  "route": "M2",
+  "axis": "Geometría",
+  "prereqs": []
+ },
+ {
+  "id": "M2-G3",
+  "name": "Relaciones métricas en la circunferencia",
+  "route": "M2",
+  "axis": "Geometría",
+  "prereqs": []
+ },
+ {
+  "id": "M2-G4",
+  "name": "Esfera: superficie y volumen",
+  "route": "M2",
+  "axis": "Geometría",
+  "prereqs": []
+ },
+ {
+  "id": "M2-G5",
+  "name": "Rectas en el plano",
+  "route": "M2",
+  "axis": "Geometría",
+  "prereqs": [
+   "M1-A5",
+   "M1-G3"
+  ]
+ },
+ {
+  "id": "M2-P1",
+  "name": "Medidas de dispersión",
+  "route": "M2",
+  "axis": "Probabilidad y estadística",
+  "prereqs": []
+ },
+ {
+  "id": "M2-P2",
+  "name": "Probabilidad condicional",
+  "route": "M2",
+  "axis": "Probabilidad y estadística",
+  "prereqs": []
+ },
+ {
+  "id": "M2-P3",
+  "name": "Permutación y combinatoria",
+  "route": "M2",
+  "axis": "Probabilidad y estadística",
+  "prereqs": []
+ },
+ {
+  "id": "M2-P4",
+  "name": "Modelos probabilísticos",
+  "route": "M2",
+  "axis": "Probabilidad y estadística",
+  "prereqs": [
+   "M2-P1",
+   "M2-P3",
+   "M1-P3"
+  ]
+ }
+]

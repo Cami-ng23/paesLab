@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block c %}<div class="hero"><h1>Entrada de jugadores ⚽</h1>{% if bad %}<div class="msg bad">Clave incorrecta.</div>{% endif %}
+<form method="post"><label class="mut" for="p">Clave</label><input id="p" name="p" type="password" autofocus style="width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:#050a14;color:var(--tx)"><div class="row"><button>Entrar</button></div></form></div>{% endblock %}

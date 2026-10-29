@@ -1,0 +1,23 @@
+:root{--bg:#070d1a;--card:#0f1a2e;--line:#1f3354;--tx:#eaf1ff;--mut:#8da3c8;--grass:#22c55e;--gold:#fbbf24;--blue:#3b82f6;--bad:#f87171}
+*{box-sizing:border-box}body{margin:0;color:var(--tx);font:16px/1.55 "Segoe UI",system-ui,sans-serif;background:var(--bg) radial-gradient(circle at 85% -10%,rgba(34,197,94,.14),transparent 45%) fixed}
+a{color:var(--gold);text-decoration:none}main{max-width:1000px;margin:0 auto;padding:20px}
+header{display:flex;gap:14px;align-items:center;border-bottom:1px solid var(--line);padding:12px 20px;background:rgba(7,13,26,.9)}
+header a{color:var(--tx);font-weight:800;letter-spacing:.04em}.dorsal{background:var(--gold);color:#111;border-radius:6px;padding:0 9px;font-weight:900;font-size:1.3rem;line-height:1.5}
+h1,h2{margin:.5em 0;letter-spacing:.01em}h2{font-size:1.1rem;text-transform:uppercase;color:var(--mut);letter-spacing:.12em}.mut{color:var(--mut)}
+.hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;padding:22px;background:linear-gradient(135deg,#0c2a1c,#0f1a2e 60%)}
+.hero:before{content:"7";position:absolute;right:14px;top:-34px;font-size:12rem;font-weight:900;color:rgba(251,191,36,.09);line-height:1}
+.hero:after{content:"";position:absolute;left:-60px;bottom:-60px;width:160px;height:160px;border:2px solid rgba(255,255,255,.07);border-radius:50%}
+.score{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.score div{background:#050a14;border:1px solid var(--line);border-radius:10px;padding:8px 16px;font-variant-numeric:tabular-nums}.score b{font-size:1.6rem;color:var(--gold);display:block;line-height:1.1}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;position:relative}a.card{color:var(--tx)}a.card:hover{border-color:var(--grass);transform:translateY(-2px)}
+.bar{height:10px;background:#0a1424;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:6px 0 14px}.bar i{display:block;height:100%;background:repeating-linear-gradient(90deg,#16a34a 0 24px,#22c55e 24px 48px)}
+.tag{font-size:.8rem;padding:2px 9px;border-radius:99px;border:1px solid var(--line);color:var(--mut);display:inline-block}.tag.good{color:var(--grass);border-color:var(--grass)}.tag.warn{color:var(--gold);border-color:var(--gold)}.tag.lrn{color:#7dd3fc;border-color:#7dd3fc}
+button,.btn{background:var(--grass);color:#04200f;font-weight:700;border:0;border-radius:8px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer;display:inline-block}button.alt{background:transparent;border:1px solid var(--line);color:var(--tx);font-weight:500}
+button:disabled{opacity:.4;cursor:not-allowed}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+input[type=text]{width:100%;background:#050a14;color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:12px;font:1.15rem ui-monospace,Consolas,monospace}
+.q{font-size:1.25rem;white-space:pre-line;margin:14px 0}.msg{padding:10px 14px;border-radius:8px;margin:10px 0;border:1px solid}.ok{border-color:var(--grass);color:var(--grass)}.bad{border-color:var(--bad);color:var(--bad)}.warn{border-color:var(--gold);color:var(--gold)}.info{border-color:var(--blue)}
+.hint{border-left:3px solid var(--gold);padding-left:12px;margin:8px 0}form.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}table{border-collapse:collapse;width:100%}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+.pitch{position:relative;height:30px;margin:8px 0 16px;border-radius:8px;border:1px solid var(--line);background:repeating-linear-gradient(90deg,#0e3d22 0 40px,#115029 40px 80px)}.pitch i{position:absolute;top:2px;font-style:normal;font-size:1.3rem;transform:translateX(-50%)}.pitch span{position:absolute;right:8px;top:3px}
+.final{text-align:center;padding:24px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(135deg,#0c2a1c,#0f1a2e)}.final big{display:block;font-size:2.6rem;font-weight:900;color:var(--gold)}
+.marcador{font-size:2.2rem;font-weight:900;font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:no-preference){.pitch i{transition:left .5s}a.card{transition:transform .15s,border-color .15s}}

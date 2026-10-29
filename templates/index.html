@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block c %}
+<div class="hero"><h1>¡Vamos, Camilo! ⚽</h1><div class="mut">{{ frase }}</div>
+<div class="score"><div><b>{{ cnt.M1[0] }}/{{ cnt.M1[1] }}</b>M1 titulares</div><div><b>{{ cnt.M2[0] }}/{{ cnt.M2[1] }}</b>M2 titulares</div><div><b>{{ racha }} 🔥</b>días de entrenamiento seguidos</div></div></div>
+<p class="mut">El avance cuenta solo unidades aprobadas, no ejercicios hechos. Tus puntos son entender, no correr.</p>
+{% if due %}<h2>🔁 Repasos pendientes</h2><div class="grid">{% for u in due %}<a class="card" href="{{ url_for('unit', uid=u.id) }}">{{ u.id }} · {{ u.name }}</a>{% endfor %}</div>{% endif %}
+{% for r in ('M1','M2') %}<h2>Ruta {{ r }} · {{ prog[r] }}%</h2><div class="bar"><i style="width:{{ prog[r] }}%"></i></div><div class="grid">{% for u in units if u.route==r %}{% set s=st.get(u.id,{}).get('status','sin_estudiar') %}
+<a class="card" href="{{ url_for('unit', uid=u.id) }}"><div class="mut">{{ u.id }} · {{ u.axis }}</div><div style="margin:4px 0 8px"><b>{{ u.name }}</b></div>
+<span class="tag {{ 'good' if s in OK else 'warn' if s=='refuerzo' else 'lrn' if s=='en_aprendizaje' else '' }}">{{ LABEL[s] }}</span>{% if u.id not in TPL %} <span class="tag">sin ejercicios aún</span>{% endif %}</a>{% endfor %}</div>{% endfor %}
+{% endblock %}
