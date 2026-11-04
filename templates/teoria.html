@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block c %}
+<a href="{{ url_for('unit', uid=u.id) }}">‹ Volver a la unidad</a>
+<h1>📖 {{ u.id }} · {{ u.name }}</h1>
+<p class="mut">Resumen de estudio hecho para practicar. No es material oficial: contrástalo con tu cuaderno o tu profesor.</p>
+{% if L %}<div class="card"><h2>Lo esencial</h2><ol class="lista">{% for c in L.claves %}<li>{{ c }}</li>{% endfor %}</ol></div>
+<div class="card sep"><h2>Ejemplo resuelto</h2><p>{{ L.ejemplo }}</p></div>
+<div class="card sep"><h2>Error frecuente</h2><p>{{ L.error }}</p></div>
+{% else %}<div class="msg info">Esta unidad todavía no tiene resumen.</div>{% endif %}
+<div class="row"><a class="btn" href="{{ url_for('unit', uid=u.id) }}">Ir a practicar</a></div>{% endblock %}

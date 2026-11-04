@@ -21,3 +21,24 @@ input[type=text]{width:100%;background:#050a14;color:var(--tx);border:1px solid 
 .final{text-align:center;padding:24px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(135deg,#0c2a1c,#0f1a2e)}.final big{display:block;font-size:2.6rem;font-weight:900;color:var(--gold)}
 .marcador{font-size:2.2rem;font-weight:900;font-variant-numeric:tabular-nums}
 @media(prefers-reduced-motion:no-preference){.pitch i{transition:left .5s}a.card{transition:transform .15s,border-color .15s}}
+
+/* ---- Espaciado y toques cómodos (tablet/celular) ---- */
+.grid{gap:18px}.card{padding:18px}.card.sep{margin-top:16px}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;align-items:center}
+button,.btn{min-height:46px;padding:10px 22px;margin:0;line-height:1.3;text-align:center}
+a.btn.alt{background:transparent;border:1px solid var(--line);color:var(--tx);font-weight:500}a.btn{text-decoration:none}
+.card form button,.card>a.btn,.card>button{margin-top:14px}
+label{display:block;margin-bottom:8px}input[type=text]{margin-bottom:4px}
+.msg{margin:18px 0}.hint{margin:14px 0}.q{margin:18px 0}.tag{margin:0 8px 6px 0}
+.lista{padding-left:22px;margin:8px 0}.lista li{margin:10px 0}
+h2{margin:28px 0 12px}
+@media(max-width:600px){main{padding:14px}.row>*{flex:1 1 100%}.row button,.row .btn{width:100%}}
+
+/* ---- cuentas, trofeos, temporada ---- */
+header .nav{margin-left:8px}header .grow{margin-left:auto}form{margin:0}button.chico{min-height:36px;padding:4px 14px}
+input[type=password]{width:100%;background:#050a14;color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:1.05rem}
+.sepl{margin-top:16px}
+.trofeo{font-size:2.4rem;line-height:1.2}.trofeo.grande{font-size:5rem}.card.oro,.final.oro{border-color:var(--gold);box-shadow:0 0 24px rgba(251,191,36,.25)}
+.final{position:relative;overflow:hidden}.confeti{position:absolute;inset:0;pointer-events:none}.confeti span{position:absolute;top:-30px;font-size:1.6rem;opacity:0}
+@media(prefers-reduced-motion:no-preference){.confeti span{animation:cae 3s ease-in 1}@keyframes cae{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(340px) rotate(300deg)}}
+.trofeo.grande{animation:pop .6s ease-out}@keyframes pop{0%{transform:scale(.3)}70%{transform:scale(1.15)}100%{transform:scale(1)}}}

@@ -1,0 +1,281 @@
+{
+ "M1-N1": {
+  "claves": [
+   "Enteros: signos iguales se suman y se conserva el signo; signos distintos se restan y gana el de mayor valor absoluto.",
+   "Restar un número equivale a sumar su opuesto: a − (−b) = a + b.",
+   "Fracciones: para sumar o restar usa denominador común; para multiplicar, numerador por numerador y denominador por denominador."
+  ],
+  "ejemplo": "−3 − (−5) + 2·(−4) = −3 + 5 − 8 = −6. Primero la multiplicación, luego de izquierda a derecha.",
+  "error": "Olvidar que menos por menos es más, o sumar fracciones sumando también los denominadores."
+ },
+ "M1-N2": {
+  "claves": [
+   "p% de una cantidad C es C·p/100.",
+   "Descuento d%: pagas (100 − d)% del precio. Aumento a%: pagas (100 + a)%.",
+   "Porcentaje que es a de b: (a/b)·100."
+  ],
+  "ejemplo": "Un precio de $20.000 con 15% de descuento: 20.000·85/100 = $17.000.",
+  "error": "Restar el porcentaje como si fueran pesos, o sumar dos porcentajes sucesivos como si fueran uno solo."
+ },
+ "M1-N3": {
+  "claves": [
+   "Misma base: a^m·a^n = a^(m+n); a^m/a^n = a^(m−n); (a^m)^n = a^(m·n).",
+   "a^0 = 1 y a^(−n) = 1/a^n.",
+   "Raíz enésima: ⁿ√(a^m) = a^(m/n). Además √(a·b) = √a·√b."
+  ],
+  "ejemplo": "(2^3·2^4)/2^5 = 2^(3+4−5) = 2^2 = 4.",
+  "error": "Sumar exponentes cuando las bases son distintas (2^3·3^2 no es 6^5)."
+ },
+ "M1-A1": {
+  "claves": [
+   "(a+b)² = a² + 2ab + b²; (a−b)² = a² − 2ab + b²; (a+b)(a−b) = a² − b².",
+   "Factorizar x² + sx + p: busca dos números que sumen s y multipliquen p.",
+   "Términos semejantes: se suman sus coeficientes."
+  ],
+  "ejemplo": "x² + 5x + 6: 2 y 3 suman 5 y multiplican 6, entonces = (x+2)(x+3).",
+  "error": "Escribir (a+b)² = a² + b², olvidando el doble producto."
+ },
+ "M1-A2": {
+  "claves": [
+   "Directa: y/x = k es constante; si uno se duplica, el otro también.",
+   "Inversa: x·y = k es constante; si uno se duplica, el otro se reduce a la mitad.",
+   "Para identificar: ¿más de uno implica más del otro (directa) o menos (inversa)?"
+  ],
+  "ejemplo": "4 obreros tardan 12 días: 4·12 = 48. Con 6 obreros: 48/6 = 8 días.",
+  "error": "Usar regla de tres directa cuando la relación es inversa."
+ },
+ "M1-A3": {
+  "claves": [
+   "Ecuación: lo que haces a un lado debes hacerlo al otro. Aísla la x.",
+   "Inecuación: igual, pero si multiplicas o divides por un número negativo, el sentido de la desigualdad se invierte.",
+   "En problemas: define la incógnita, plantea la ecuación con los datos y verifica el resultado."
+  ],
+  "ejemplo": "3x + 5 = 20 → 3x = 15 → x = 5. Y −2x < 6 → x > −3 (el signo se invirtió).",
+  "error": "Pasar un término al otro lado sin cambiarle el signo, o no invertir la desigualdad al dividir por un negativo."
+ },
+ "M1-A4": {
+  "claves": [
+   "Sistema 2×2: dos ecuaciones con dos incógnitas; la solución es el par (x, y) que cumple ambas.",
+   "Sustitución: despeja una variable y reemplázala en la otra ecuación.",
+   "Reducción: multiplica las ecuaciones para que una variable tenga coeficientes opuestos y suma."
+  ],
+  "ejemplo": "x + y = 5 y x − y = 1: al sumar, 2x = 6, x = 3 y luego y = 2.",
+  "error": "Hallar solo x y olvidar calcular y, o no verificar en ambas ecuaciones."
+ },
+ "M1-A5": {
+  "claves": [
+   "Función lineal: f(x) = mx. Afín: f(x) = mx + n.",
+   "m es la pendiente (cuánto sube y por cada 1 que avanza x); n es el corte con el eje y.",
+   "Pendiente entre dos puntos: m = (y₂ − y₁)/(x₂ − x₁)."
+  ],
+  "ejemplo": "Por (1, 3) y (3, 7): m = (7−3)/(3−1) = 2; n = 3 − 2·1 = 1; f(x) = 2x + 1.",
+  "error": "Restar en distinto orden el numerador y el denominador."
+ },
+ "M1-A6": {
+  "claves": [
+   "Ecuación ax² + bx + c = 0: factoriza o usa x = (−b ± √(b² − 4ac)) / 2a.",
+   "La gráfica es una parábola: abre hacia arriba si a > 0 y hacia abajo si a < 0.",
+   "Vértice: x = −b/(2a). Corte con el eje y: (0, c). Ceros: las soluciones de la ecuación."
+  ],
+  "ejemplo": "y = x² − 4x + 3: ceros 1 y 3; vértice en x = 2, y = 4 − 8 + 3 = −1, es decir (2, −1).",
+  "error": "Olvidar el signo de b al calcular −b/(2a)."
+ },
+ "M1-G1": {
+  "claves": [
+   "Pitágoras (triángulo rectángulo): a² + b² = c², con c la hipotenusa.",
+   "Áreas: triángulo b·h/2; paralelogramo b·h; trapecio (B+b)·h/2; círculo π·r².",
+   "Perímetro del círculo: 2π·r."
+  ],
+  "ejemplo": "Catetos 6 y 8: c = √(36 + 64) = 10.",
+  "error": "Usar el lado inclinado como altura en vez de la perpendicular."
+ },
+ "M1-G2": {
+  "claves": [
+   "Cubo de arista a: área total 6a², volumen a³.",
+   "Paralelepípedo a×b×c: volumen a·b·c; área total 2(ab + bc + ac).",
+   "Cilindro: volumen π·r²·h; área total 2π·r·(r + h)."
+  ],
+  "ejemplo": "Cilindro con r = 3 y h = 5: V = π·9·5 = 45π.",
+  "error": "Confundir área (cm²) con volumen (cm³), o usar el diámetro como radio."
+ },
+ "M1-G3": {
+  "claves": [
+   "Traslación con vector (a, b): (x, y) → (x + a, y + b).",
+   "Reflexión respecto al eje x: (x, y) → (x, −y); respecto al eje y: (x, y) → (−x, y).",
+   "Rotación de 90° antihoraria con centro en el origen: (x, y) → (−y, x); de 180°: (x, y) → (−x, −y)."
+  ],
+  "ejemplo": "(2, 3) rotado 90° antihorario → (−3, 2).",
+  "error": "Cambiar el signo de la coordenada equivocada en una reflexión."
+ },
+ "M1-G4": {
+  "claves": [
+   "Figuras semejantes: ángulos iguales y lados proporcionales con razón k.",
+   "Longitudes se multiplican por k; áreas por k²; volúmenes por k³.",
+   "Escala 1:n: 1 unidad en el plano representa n unidades reales."
+  ],
+  "ejemplo": "Escala 1:50.000: 4 cm en el mapa son 200.000 cm = 2 km reales.",
+  "error": "Multiplicar las áreas por k en lugar de k²."
+ },
+ "M1-P1": {
+  "claves": [
+   "Frecuencia absoluta: cuántas veces aparece un dato. Relativa: absoluta/total (por 100 si quieres porcentaje).",
+   "Promedio: suma de los datos dividida por la cantidad de datos.",
+   "Mediana: dato central de los datos ordenados; con cantidad par, promedio de los dos centrales."
+  ],
+  "ejemplo": "Datos 2, 4, 9: promedio 5; mediana 4.",
+  "error": "Calcular la mediana sin ordenar los datos."
+ },
+ "M1-P2": {
+  "claves": [
+   "Los cuartiles Q1, Q2 (mediana) y Q3 dividen los datos ordenados en cuatro partes.",
+   "Percentil p: valor bajo el cual queda aproximadamente p% de los datos.",
+   "Diagrama de cajón: caja de Q1 a Q3 con la mediana dentro; rango intercuartil = Q3 − Q1."
+  ],
+  "ejemplo": "Q1 = 12 y Q3 = 20: el rango intercuartil es 8.",
+  "error": "Confundir el rango (máximo − mínimo) con el rango intercuartil."
+ },
+ "M1-P3": {
+  "claves": [
+   "Probabilidad = casos favorables / casos posibles (sucesos equiprobables).",
+   "Regla aditiva: P(A o B) = P(A) + P(B) − P(A y B).",
+   "Regla multiplicativa para sucesos independientes: P(A y B) = P(A)·P(B)."
+  ],
+  "ejemplo": "Dado: P(par) = 3/6 = 1/2.",
+  "error": "Sumar probabilidades de sucesos no excluyentes sin restar la intersección."
+ },
+ "M2-N1": {
+  "claves": [
+   "Los reales incluyen racionales e irracionales (como √2 y π).",
+   "Propiedades: √a·√b = √(ab); √(a²·b) = a√b.",
+   "Racionalizar: multiplica numerador y denominador por la raíz del denominador."
+  ],
+  "ejemplo": "√72 = √(36·2) = 6√2.",
+  "error": "Escribir √(a + b) = √a + √b, que es falso."
+ },
+ "M2-N2": {
+  "claves": [
+   "Interés simple: I = C·r·t (solo sobre el capital inicial).",
+   "Interés compuesto: C final = C·(1 + r)^n; el interés se calcula sobre el total acumulado.",
+   "La tasa y el plazo deben estar en la misma unidad de tiempo (mensual con meses, anual con años)."
+  ],
+  "ejemplo": "$1.000.000 al 10% anual por 2 años (compuesto): 1.000.000·1,1² = $1.210.000.",
+  "error": "Usar interés simple cuando el enunciado es compuesto."
+ },
+ "M2-N3": {
+  "claves": [
+   "log_b(x) = k significa b^k = x (con b > 0, b ≠ 1 y x > 0).",
+   "log(a·c) = log a + log c; log(a/c) = log a − log c; log(a^n) = n·log a.",
+   "log_b(1) = 0 y log_b(b) = 1."
+  ],
+  "ejemplo": "log₂(8) = 3 porque 2³ = 8.",
+  "error": "Escribir log(a + c) = log a + log c."
+ },
+ "M2-A1": {
+  "claves": [
+   "Un sistema 2×2 puede tener solución única, ninguna o infinitas.",
+   "Rectas con distinta pendiente: se cortan en un punto (solución única).",
+   "Misma pendiente: si son la misma recta, infinitas soluciones; si son paralelas distintas, ninguna."
+  ],
+  "ejemplo": "x + 2y = 3 y 2x + 4y = 6: la segunda es el doble de la primera, infinitas soluciones. Con 2x + 4y = 7, ninguna.",
+  "error": "Concluir «sin solución» cuando los términos libres también son proporcionales."
+ },
+ "M2-A2": {
+  "claves": [
+   "Exponencial f(x) = a·b^x: crece si b > 1 y decrece si 0 < b < 1; corta el eje y en (0, a).",
+   "Logarítmica f(x) = log_b(x): es la inversa de la exponencial; corta el eje x en (1, 0).",
+   "Potencia f(x) = x^n: su forma depende de si n es par o impar."
+  ],
+  "ejemplo": "f(x) = 3·2^x: f(0) = 3 y f(4) = 3·16 = 48.",
+  "error": "Confundir x² (potencia) con 2^x (exponencial)."
+ },
+ "M2-A3": {
+  "claves": [
+   "y = A·sen(Bx) + k: amplitud |A|, período 2π/B, eje medio y = k.",
+   "El seno parte en 0; el coseno parte en su valor máximo (1).",
+   "Valores notables: sen 30° = 1/2; cos 60° = 1/2; sen 90° = 1; cos 0° = 1."
+  ],
+  "ejemplo": "y = 2·cos(x) + 1: máximo 3 y mínimo −1.",
+  "error": "Calcular el período como B/2π en lugar de 2π/B."
+ },
+ "M2-G1": {
+  "claves": [
+   "Homotecia de centro O y razón k: cada punto P va a P' en la recta OP con OP' = k·OP.",
+   "Longitudes × |k|; áreas × k²; si k es negativa, la imagen queda al otro lado del centro.",
+   "Con centro en el origen: (x, y) → (kx, ky)."
+  ],
+  "ejemplo": "Razón 3 y centro en el origen: (2, −1) → (6, −3).",
+  "error": "Multiplicar el área por k en vez de k²."
+ },
+ "M2-G2": {
+  "claves": [
+   "En un triángulo rectángulo: sen α = opuesto/hipotenusa; cos α = adyacente/hipotenusa; tan α = opuesto/adyacente.",
+   "Primero identifica cuál cateto es opuesto y cuál adyacente al ángulo.",
+   "Si te falta un lado, usa Pitágoras."
+  ],
+  "ejemplo": "Catetos 3 y 4, hipotenusa 5: sen α (opuesto 3) = 3/5.",
+  "error": "Intercambiar opuesto y adyacente al cambiar de ángulo."
+ },
+ "M2-G3": {
+  "claves": [
+   "Ángulo inscrito = la mitad del ángulo del centro que subtiende el mismo arco.",
+   "Cuerdas que se cortan: a·b = c·d (producto de los segmentos de cada una).",
+   "Tangente y secante desde un punto exterior: PT² = PA·PB."
+  ],
+  "ejemplo": "Ángulo del centro de 80° → ángulo inscrito de 40°.",
+  "error": "Igualar el ángulo inscrito con el del centro."
+ },
+ "M2-G4": {
+  "claves": [
+   "Volumen de la esfera: V = (4/3)·π·r³.",
+   "Área de la superficie: A = 4π·r².",
+   "Si tienes el diámetro, divídelo por 2 antes de usar las fórmulas."
+  ],
+  "ejemplo": "r = 3: V = (4/3)·π·27 = 36π; A = 4π·9 = 36π.",
+  "error": "Usar r² en lugar de r³ en el volumen."
+ },
+ "M2-G5": {
+  "claves": [
+   "Recta y = mx + n: pendiente m, corte con el eje y en n.",
+   "Paralelas: igual pendiente. Perpendiculares: m₁·m₂ = −1.",
+   "Recta por (x₀, y₀) con pendiente m: y − y₀ = m(x − x₀)."
+  ],
+  "ejemplo": "Perpendicular a una recta de pendiente 2: m = −1/2.",
+  "error": "Tomar el recíproco sin cambiar el signo."
+ },
+ "M2-P1": {
+  "claves": [
+   "Rango = máximo − mínimo.",
+   "Varianza = promedio de los cuadrados de las diferencias respecto a la media.",
+   "Desviación estándar = raíz de la varianza; mide qué tan lejos están los datos del promedio."
+  ],
+  "ejemplo": "Datos 4, 6, 8: media 6; diferencias −2, 0, 2; varianza (4 + 0 + 4)/3 = 8/3.",
+  "error": "Olvidar elevar al cuadrado las diferencias."
+ },
+ "M2-P2": {
+  "claves": [
+   "P(A | B) = P(A ∩ B)/P(B): probabilidad de A sabiendo que ya ocurrió B.",
+   "Sin reposición, las extracciones son dependientes: la segunda cambia según la primera.",
+   "Regla multiplicativa general: P(A ∩ B) = P(B)·P(A | B)."
+  ],
+  "ejemplo": "Urna con 5 rojas y 5 azules, sin reposición: P(2 rojas) = 5/10 · 4/9 = 2/9.",
+  "error": "Multiplicar las probabilidades como si fueran independientes cuando no lo son."
+ },
+ "M2-P3": {
+  "claves": [
+   "Permutaciones de n objetos distintos: n!.",
+   "Si el orden importa y eliges k de n: P(n,k) = n!/(n−k)!.",
+   "Si el orden no importa: C(n,k) = n!/(k!·(n−k)!)."
+  ],
+  "ejemplo": "C(5,2) = 5!/(2!·3!) = 10.",
+  "error": "Usar permutación cuando el orden no importa."
+ },
+ "M2-P4": {
+  "claves": [
+   "Binomial: n ensayos independientes con probabilidad p; P(X = k) = C(n,k)·p^k·(1−p)^(n−k); media n·p.",
+   "Normal N(μ, σ): estandariza con z = (x − μ)/σ.",
+   "Regla empírica: ≈68% a 1σ, ≈95% a 2σ y ≈99,7% a 3σ de la media."
+  ],
+  "ejemplo": "N(100, 15) y x = 130: z = 30/15 = 2.",
+  "error": "Dividir por la varianza en vez de la desviación estándar al calcular z."
+ }
+}

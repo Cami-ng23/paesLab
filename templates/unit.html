@@ -2,8 +2,13 @@
 <a href="{{ url_for('index') }}">‹ Panel</a><h1>{{ u.id }} · {{ u.name }}</h1>
 <p><span class="tag">{{ LABEL[st.get('status','sin_estudiar')] }}</span>{% if st.next_review %} <span class="mut">Próximo repaso: {{ st.next_review }}</span>{% endif %}</p>
 {% if falta %}<div class="msg warn">Aviso: te falta base en {% for p in falta %}{{ p }} {{ names[p] }}{% if not loop.last %}, {% endif %}{% endfor %}. Puedes continuar igual.</div>{% endif %}
-{% if u.id in TPL %}<p class="mut">Ejercicios originales de práctica, no oficiales. Escribe números sin separador de miles.</p>
-<div class="grid">{% for m in ('diagnostico','practica','evaluacion','repaso') %}<form method="post" action="{{ url_for('start', uid=u.id, mode=m) }}" class="card"><strong>{{ MODES[m] }}</strong><p class="mut">{{ {'diagnostico':'Sin pistas. 80% o más aprueba la unidad.','practica':'Con 2 pistas y solución a pedido.','evaluacion':'Sin pistas, variantes nuevas cada vez.','repaso':'Comprueba que sigues dominándola.'}[m] }}</p><button>Empezar</button></form>{% endfor %}</div>
+{% if u.id in TPL %}<p class="mut">Orden sugerido: 1) estudia la teoría, 2) entrena con pistas, 3) repasa sin pistas. Ejercicios originales de práctica, no oficiales. Escribe números sin separador de miles.</p>
+<div class="grid">
+<div class="card"><strong>1 · Estudiar</strong><p class="mut">Lo esencial, un ejemplo resuelto y el error más común.</p><a class="btn" href="{{ url_for('teoria', uid=u.id) }}">Abrir teoría</a></div>
+{% set desc={'practica':'Si te equivocas, te detienes: reintentas, pides pista, ves la solución o repasas teoría.','repaso':'Sin pistas. Si lo superas, la unidad queda aprobada y se programan repasos.','diagnostico':'Opcional: para saber qué ya dominas. Sin pistas y con explicación inmediata.'} %}
+{% set pre={'practica':'2 · ','repaso':'3 · '} %}
+{% for m in ('practica','repaso','diagnostico') %}<form method="post" action="{{ url_for('start', uid=u.id, mode=m) }}" class="card"><strong>{{ pre.get(m,'') }}{{ MODES[m] }}</strong>
+<p class="mut">{{ desc[m] }}</p><button>Empezar</button></form>{% endfor %}</div>
 <h2>Estadísticas</h2><p>Intentos: {{ a.n or 0 }} · Correctas independientes: {{ a.ind or 0 }} · Correctas con ayuda: {{ a.aid or 0 }}</p>
 {% if sess %}<table><tr><th>Fecha</th><th>Modo</th><th>Resultado</th><th></th></tr>{% for s in sess %}<tr><td>{{ s.ts }}</td><td>{{ MODES[s.mode] }}</td><td>{{ s.score }}/{{ s.total }}</td><td>{{ 'aprobó' if s.passed else 'no aprobó' }}</td></tr>{% endfor %}</table>{% endif %}
-{% else %}<div class="msg info">Esta unidad todavía no tiene plantillas de ejercicios.</div>{% endif %}{% endblock %}
+{% else %}<div class="card"><strong>Estudiar</strong><p class="mut">Aún sin ejercicios, pero puedes leer la teoría.</p><a class="btn" href="{{ url_for('teoria', uid=u.id) }}">Abrir teoría</a></div>{% endif %}{% endblock %}

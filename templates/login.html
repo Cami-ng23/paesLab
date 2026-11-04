@@ -1,2 +1,5 @@
-{% extends 'base.html' %}{% block c %}<div class="hero"><h1>Entrada de jugadores ⚽</h1>{% if bad %}<div class="msg bad">Clave incorrecta.</div>{% endif %}
-<form method="post"><label class="mut" for="p">Clave</label><input id="p" name="p" type="password" autofocus style="width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:#050a14;color:var(--tx)"><div class="row"><button>Entrar</button></div></form></div>{% endblock %}
+{% extends 'base.html' %}{% block c %}<div class="hero" style="max-width:460px;margin:30px auto"><h1>Entrada de jugadores ⚽</h1>
+{% if bad %}<div class="msg bad">Usuario o clave incorrectos.</div>{% endif %}
+<form method="post"><label class="mut" for="u">Usuario</label><input id="u" name="u" type="text" autocomplete="username" autofocus required>
+<label class="mut sepl" for="p">Clave</label><input id="p" name="p" type="password" autocomplete="current-password" required>
+<div class="row"><button>Entrar</button><a class="btn alt" href="{{ url_for('registro') }}">Crear cuenta</a></div></form></div>{% endblock %}

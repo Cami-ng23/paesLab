@@ -1,6 +1,13 @@
 {% extends 'base.html' %}{% block c %}
-<div class="final"><big>{{ '¡GOLAZO, CAMILO!' if passed else '🟨 Tarjeta amarilla' }}</big><div class="marcador">CAMILO {{ score }} – {{ total-score }} PAES</div>
-<p class="mut">{{ MODES[mode] }} · {{ 'Alcanzaste el mínimo (solo cuentan respuestas correctas sin pistas).' if passed else 'No alcanzaste el mínimo. Revisa cada error, que ahí está el aprendizaje, y vuelve con variantes nuevas.' }}</p></div>
-{% for x in rows %}<div class="card" style="margin:10px 0"><span class="tag {{ 'good' if x.r.ok and not x.r.hints else 'warn' }}">{{ 'Correcta' if x.r.ok and not x.r.hints else 'Correcta con ayuda' if x.r.ok else 'Incorrecta' }}</span>
+<div class="final {{ 'oro' if pr.nivel==0 or campeon }}">
+{% if pr.nivel==0 or campeon %}<div class="confeti" aria-hidden="true">{% for e in '🎉⚽✨🏆🎊⚽✨🎉' %}<span style="left:{{ loop.index*12 }}%;animation-delay:{{ loop.index0*0.25 }}s">{{ e }}</span>{% endfor %}</div>{% endif %}
+<div class="mut">Fin de la temporada de hoy · {{ u.id }} · {{ MODES[mode] }}</div>
+<div class="trofeo grande">{{ pr.icono }}</div><big>{{ pr.nombre }}</big><div class="marcador">{{ session.get('name')|capitalize }} {{ score }} – {{ total-score }} PAES</div>
+<p class="mut">{{ pr.texto }}. Solo cuentan las respuestas correctas sin ayuda.</p>
+{% if nuevo_estado %}<p>{{ LABEL[nuevo_estado] }}</p>{% endif %}
+<p>Temporada {{ route }}: <b>{{ temp.done }}/{{ temp.total }}</b> partidos ganados</p><div class="bar"><i style="width:{{ temp.pct }}%"></i></div></div>
+{% if campeon %}<div class="msg ok" style="font-size:1.2rem">🏆 ¡CAMPEÓN DE LA TEMPORADA {{ route }}! Ganaste el Balón de Oro. Míralo en tu sala de trofeos.</div>{% endif %}
+<h2>Repaso de la sesión</h2>
+{% for x in rows %}<div class="card" style="margin:12px 0"><span class="tag {{ 'good' if x.r.ok and not x.r.hints else 'warn' }}">{{ 'Correcta' if x.r.ok and not x.r.hints else 'Correcta con ayuda' if x.r.ok else 'Incorrecta' }}</span>
 <div class="q">{{ x.p.text }}</div><div class="mut">Tu respuesta: {{ x.r.user or '—' }}</div><div>Solución: {{ x.p.sol }}</div></div>{% endfor %}
-<a class="btn" href="{{ url_for('unit', uid=u.id) }}">Volver a la unidad</a>{% endblock %}
+<div class="row"><a class="btn" href="{{ url_for('unit', uid=u.id) }}">Volver a la unidad</a><a class="btn alt" href="{{ url_for('teoria', uid=u.id) }}">📖 Repasar teoría</a><a class="btn alt" href="{{ url_for('trofeos') }}">🏆 Trofeos</a></div>{% endblock %}

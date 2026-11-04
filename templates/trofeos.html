@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block c %}<h1>🏆 Sala de trofeos</h1>
+<p class="mut">Los premios reconocen resolver por tu cuenta y ser constante. Nada se gana por ir rápido.</p>
+<h2>Balón de Oro de temporada</h2><div class="grid">{% for r in ('M1','M2') %}<div class="card {{ 'oro' if temp[r].completa }}"><div class="trofeo">{{ '🏆' if temp[r].completa else '🔒' }}</div><strong>Temporada {{ r }}</strong>
+<p class="mut">{{ '¡Campeón! Dominaste todas las unidades.' if temp[r].completa else 'Llevas %d de %d partidos ganados.'|format(temp[r].done, temp[r].total) }}</p><div class="bar"><i style="width:{{ temp[r].pct }}%"></i></div></div>{% endfor %}</div>
+<h2>Premios de tus sesiones</h2><div class="grid">{% for m,i,n,t in premios %}<div class="card"><div class="trofeo">{{ i }}</div><strong>{{ n }} × {{ cnt[loop.index0] }}</strong><p class="mut">{{ t }}</p></div>{% endfor %}</div>
+<p>🔥 Días de entrenamiento seguidos: <b>{{ racha }}</b></p>{% endblock %}

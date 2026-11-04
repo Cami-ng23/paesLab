@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block c %}
+<span class="mut">{{ u.id }} · {{ MODES[z.mode] }} · respondidas {{ z.pos }} de {{ n }}</span>
+<div class="pitch"><i style="left:{{ 4+92*z.pos/n }}%">⚽</i><span>🥅</span></div>
+{% if fb.ok %}<div class="msg ok">✔ Correcto{% if fb.hints %} (con ayuda: no cuenta como independiente){% endif %}</div>
+{% else %}<div class="msg bad">✘ {{ 'Pediste la solución' if fb.gaveup else 'Respuesta incorrecta' }}</div>{% endif %}
+<div class="q">{{ fb.text }}</div>
+{% if not fb.ok %}{% if fb.user %}<p class="mut">Tu respuesta: {{ fb.user }}</p>{% endif %}
+<div class="card"><strong>Solución:</strong> {{ fb.sol }}</div>
+<p class="mut">Rehazla en tu cuaderno antes de seguir. No se repite esta misma pregunta: más adelante saldrá una variante con otros números.</p>{% endif %}
+<div class="row"><form method="post" action="{{ url_for('next_q') }}"><button autofocus>{{ 'Ver resultado' if last else 'Siguiente' }}</button></form>
+{% if not fb.ok %}<a class="btn alt" href="{{ url_for('teoria', uid=u.id) }}" target="_blank" rel="noopener">📖 Repasar teoría</a>{% endif %}</div>
+{% endblock %}

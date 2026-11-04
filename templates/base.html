@@ -1,3 +1,5 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PAES Lab · Camilo</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PAES Lab</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head><body>
-<header><span class="dorsal">7</span><a href="{{ url_for('index') }}">PAES LAB · CAMILO</a><span class="mut">M1 y M2 · Admisión 2027</span></header><main>{% block c %}{% endblock %}</main></body></html>
+<header><span class="dorsal">7</span><a href="{{ url_for('index') }}">PAES LAB</a>
+{% if session.get('uid') %}<a href="{{ url_for('trofeos') }}" class="nav">🏆 Trofeos</a><span class="mut grow">{{ session.get('name') }}</span>
+<form method="post" action="{{ url_for('salir') }}"><button class="alt chico">Salir</button></form>{% else %}<span class="mut">M1 y M2 · Admisión 2027</span>{% endif %}</header><main>{% block c %}{% endblock %}</main></body></html>
