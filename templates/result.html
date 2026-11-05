@@ -9,5 +9,6 @@
 {% if campeon %}<div class="msg ok" style="font-size:1.2rem">🏆 ¡CAMPEÓN DE LA TEMPORADA {{ route }}! Ganaste el Balón de Oro. Míralo en tu sala de trofeos.</div>{% endif %}
 <h2>Repaso de la sesión</h2>
 {% for x in rows %}<div class="card" style="margin:12px 0"><span class="tag {{ 'good' if x.r.ok and not x.r.hints else 'warn' }}">{{ 'Correcta' if x.r.ok and not x.r.hints else 'Correcta con ayuda' if x.r.ok else 'Incorrecta' }}</span>
-<div class="q">{{ x.p.text }}</div><div class="mut">Tu respuesta: {{ x.r.user or '—' }}</div><div>Solución: {{ x.p.sol }}</div></div>{% endfor %}
+<div class="q">{{ x.p.text }}</div><div class="mut">Tu respuesta: {{ x.r.user or '—' }}</div><div class="sol"><strong>Solución</strong>
+{{ x.p.sol }}</div></div>{% endfor %}
 <div class="row"><a class="btn" href="{{ url_for('unit', uid=u.id) }}">Volver a la unidad</a><a class="btn alt" href="{{ url_for('teoria', uid=u.id) }}">📖 Repasar teoría</a><a class="btn alt" href="{{ url_for('trofeos') }}">🏆 Trofeos</a></div>{% endblock %}

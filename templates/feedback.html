@@ -5,7 +5,8 @@
 {% else %}<div class="msg bad">✘ {{ 'Pediste la solución' if fb.gaveup else 'Respuesta incorrecta' }}</div>{% endif %}
 <div class="q">{{ fb.text }}</div>
 {% if not fb.ok %}{% if fb.user %}<p class="mut">Tu respuesta: {{ fb.user }}</p>{% endif %}
-<div class="card"><strong>Solución:</strong> {{ fb.sol }}</div>
+<div class="card"><strong>Solución paso a paso</strong><div class="sol">{{ fb.sol }}</div></div>
+{% if LESSONS.get(u.id) %}<div class="card sep"><strong>⚠️ Error frecuente en esta unidad</strong><p>{{ LESSONS[u.id].error }}</p></div>{% endif %}
 <p class="mut">Rehazla en tu cuaderno antes de seguir. No se repite esta misma pregunta: más adelante saldrá una variante con otros números.</p>{% endif %}
 <div class="row"><form method="post" action="{{ url_for('next_q') }}"><button autofocus>{{ 'Ver resultado' if last else 'Siguiente' }}</button></form>
 {% if not fb.ok %}<a class="btn alt" href="{{ url_for('teoria', uid=u.id) }}" target="_blank" rel="noopener">📖 Repasar teoría</a>{% endif %}</div>

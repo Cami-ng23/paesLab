@@ -1,281 +1,758 @@
 {
  "M1-N1": {
+  "idea": "Los enteros incluyen números negativos: piénsalos en una recta, donde sumar es avanzar y restar es retroceder. Las fracciones son partes de un entero y, para sumarlas o compararlas, se llevan a un mismo denominador.",
   "claves": [
-   "Enteros: signos iguales se suman y se conserva el signo; signos distintos se restan y gana el de mayor valor absoluto.",
-   "Restar un número equivale a sumar su opuesto: a − (−b) = a + b.",
-   "Fracciones: para sumar o restar usa denominador común; para multiplicar, numerador por numerador y denominador por denominador."
+   "Signos iguales: se suman los valores y se conserva el signo: (−3) + (−4) = −7.",
+   "Signos distintos: se restan los valores y gana el signo del de mayor valor absoluto: (−9) + 4 = −5.",
+   "Restar es sumar el opuesto: a − (−b) = a + b.",
+   "Multiplicar o dividir: signos iguales dan +, signos distintos dan −."
   ],
-  "ejemplo": "−3 − (−5) + 2·(−4) = −3 + 5 − 8 = −6. Primero la multiplicación, luego de izquierda a derecha.",
-  "error": "Olvidar que menos por menos es más, o sumar fracciones sumando también los denominadores."
+  "pasos": [
+   "Resuelve primero paréntesis, luego multiplicaciones y divisiones, y al final sumas y restas de izquierda a derecha.",
+   "En fracciones, busca un denominador común antes de sumar o restar.",
+   "Simplifica el resultado si puedes."
+  ],
+  "ej": {
+   "t": "Calcula 1/2 + 3/4 − 1/8",
+   "pasos": [
+    "Denominador común: 8.",
+    "1/2 = 4/8 y 3/4 = 6/8.",
+    "4/8 + 6/8 − 1/8 = 9/8.",
+    "Resultado: 9/8 = 1,125."
+   ]
+  },
+  "error": "Olvidar que menos por menos es más, o sumar fracciones sumando también los denominadores (1/2 + 1/3 no es 2/5)."
  },
  "M1-N2": {
+  "idea": "Un porcentaje es una fracción de 100: 25% significa 25 de cada 100, o sea 25/100 = 0,25. Para calcular el porcentaje de una cantidad, la multiplicas por esa fracción.",
   "claves": [
-   "p% de una cantidad C es C·p/100.",
-   "Descuento d%: pagas (100 − d)% del precio. Aumento a%: pagas (100 + a)%.",
-   "Porcentaje que es a de b: (a/b)·100."
+   "p% de C = C · p / 100.",
+   "Descuento d%: pagas el (100 − d)% del precio. Aumento a%: pagas el (100 + a)%.",
+   "¿Qué porcentaje es a de b? (a ÷ b) · 100.",
+   "Dos cambios sucesivos NO se suman: el segundo se calcula sobre el resultado del primero."
   ],
-  "ejemplo": "Un precio de $20.000 con 15% de descuento: 20.000·85/100 = $17.000.",
+  "pasos": [
+   "Identifica el total (el 100%).",
+   "Decide si te piden la parte, el porcentaje o el total.",
+   "Convierte el porcentaje a decimal (÷ 100) y multiplica.",
+   "Revisa que el resultado tenga sentido: un descuento debe bajar el precio."
+  ],
+  "ej": {
+   "t": "Un abrigo de $40.000 sube 10% y luego baja 10%. ¿Cuánto cuesta al final?",
+   "pasos": [
+    "Sube 10%: 40.000 · 1,10 = 44.000.",
+    "Baja 10% sobre el nuevo precio: 44.000 · 0,90 = 39.600.",
+    "No vuelve a 40.000 porque el 10% se calculó sobre bases distintas."
+   ]
+  },
   "error": "Restar el porcentaje como si fueran pesos, o sumar dos porcentajes sucesivos como si fueran uno solo."
  },
  "M1-N3": {
+  "idea": "Una potencia es multiplicar un número por sí mismo varias veces. La raíz es la operación inversa: pregunta qué número, elevado a n, da el resultado. Las raíces se pueden escribir como potencias con exponente fraccionario.",
   "claves": [
-   "Misma base: a^m·a^n = a^(m+n); a^m/a^n = a^(m−n); (a^m)^n = a^(m·n).",
-   "a^0 = 1 y a^(−n) = 1/a^n.",
-   "Raíz enésima: ⁿ√(a^m) = a^(m/n). Además √(a·b) = √a·√b."
+   "a^m · a^n = a^(m+n) ; a^m ÷ a^n = a^(m−n) ; (a^m)^n = a^(m·n).",
+   "a^0 = 1 y a^(−n) = 1 / a^n.",
+   "ⁿ√(a^m) = a^(m/n). Por ejemplo, √a = a^(1/2).",
+   "√(a·b) = √a · √b y √(a/b) = √a / √b (con a y b positivos)."
   ],
-  "ejemplo": "(2^3·2^4)/2^5 = 2^(3+4−5) = 2^2 = 4.",
-  "error": "Sumar exponentes cuando las bases son distintas (2^3·3^2 no es 6^5)."
+  "pasos": [
+   "Si las bases son distintas, intenta escribirlas con la misma base (4 = 2², 8 = 2³).",
+   "Aplica las propiedades de los exponentes.",
+   "Calcula y simplifica el resultado."
+  ],
+  "ej": {
+   "t": "Calcula (4³ · 2⁵) / 8²",
+   "pasos": [
+    "Misma base 2: 4 = 2² y 8 = 2³.",
+    "4³ = (2²)³ = 2⁶ y 8² = (2³)² = 2⁶.",
+    "Queda (2⁶ · 2⁵)/2⁶ = 2^(6+5−6) = 2⁵.",
+    "2⁵ = 32."
+   ]
+  },
+  "error": "Sumar exponentes cuando las bases son distintas: 2³·3² no es 6⁵."
  },
  "M1-A1": {
+  "idea": "Una expresión algebraica usa letras para números desconocidos. Los productos notables son atajos para multiplicar sin repartir término por término, y factorizar es el camino inverso: convertir una suma en un producto.",
   "claves": [
-   "(a+b)² = a² + 2ab + b²; (a−b)² = a² − 2ab + b²; (a+b)(a−b) = a² − b².",
-   "Factorizar x² + sx + p: busca dos números que sumen s y multipliquen p.",
-   "Términos semejantes: se suman sus coeficientes."
+   "(a + b)² = a² + 2ab + b².",
+   "(a − b)² = a² − 2ab + b².",
+   "(a + b)(a − b) = a² − b² (suma por diferencia).",
+   "Factor común: ab + ac = a(b + c).",
+   "x² + (p + q)x + pq = (x + p)(x + q)."
   ],
-  "ejemplo": "x² + 5x + 6: 2 y 3 suman 5 y multiplican 6, entonces = (x+2)(x+3).",
-  "error": "Escribir (a+b)² = a² + b², olvidando el doble producto."
+  "pasos": [
+   "Mira si hay un factor común en todos los términos.",
+   "Revisa si es un producto notable (cuadrado perfecto o diferencia de cuadrados).",
+   "Si es x² + bx + c, busca dos números que sumen b y multipliquen c.",
+   "Comprueba multiplicando de vuelta."
+  ],
+  "ej": {
+   "t": "Factoriza x² − 7x + 12",
+   "pasos": [
+    "Busca dos números que multipliquen +12 y sumen −7.",
+    "Producto positivo y suma negativa: ambos son negativos, −3 y −4.",
+    "x² − 7x + 12 = (x − 3)(x − 4).",
+    "Comprobación: (x−3)(x−4) = x² − 4x − 3x + 12 ✓."
+   ]
+  },
+  "error": "Escribir (a + b)² = a² + b², olvidando el doble producto 2ab."
  },
  "M1-A2": {
+  "idea": "Dos magnitudes son proporcionales cuando una depende de la otra de forma constante. En la directa, si una sube, la otra sube en la misma proporción. En la inversa, si una sube, la otra baja.",
   "claves": [
-   "Directa: y/x = k es constante; si uno se duplica, el otro también.",
-   "Inversa: x·y = k es constante; si uno se duplica, el otro se reduce a la mitad.",
-   "Para identificar: ¿más de uno implica más del otro (directa) o menos (inversa)?"
+   "Directa: y = k·x, así que el cociente y/x es constante.",
+   "Inversa: x·y = k, así que el producto es constante.",
+   "En una tabla directa, si x se duplica, y se duplica; en una inversa, si x se duplica, y se reduce a la mitad.",
+   "Gráfico directo: recta por el origen. Gráfico inverso: curva (hipérbola)."
   ],
-  "ejemplo": "4 obreros tardan 12 días: 4·12 = 48. Con 6 obreros: 48/6 = 8 días.",
+  "pasos": [
+   "Decide si es directa o inversa: ¿más de una implica más de la otra?",
+   "Calcula la constante k (cociente o producto).",
+   "Usa k para hallar el valor pedido.",
+   "Verifica que sea coherente: más obreros, menos días."
+  ],
+  "ej": {
+   "t": "6 grifos llenan un estanque en 10 horas. ¿Cuánto tardan 4 grifos?",
+   "pasos": [
+    "Más grifos, menos tiempo: proporcionalidad inversa.",
+    "Constante: 6 · 10 = 60 (grifo-horas).",
+    "Con 4 grifos: 60 ÷ 4 = 15 horas.",
+    "Coherente: menos grifos, más horas."
+   ]
+  },
   "error": "Usar regla de tres directa cuando la relación es inversa."
  },
  "M1-A3": {
+  "idea": "Una ecuación es una balanza: lo que haces de un lado debes hacerlo del otro para que siga equilibrada. Resolver es dejar la incógnita sola. Las inecuaciones funcionan igual, con una excepción importante cuando hay negativos.",
   "claves": [
-   "Ecuación: lo que haces a un lado debes hacerlo al otro. Aísla la x.",
-   "Inecuación: igual, pero si multiplicas o divides por un número negativo, el sentido de la desigualdad se invierte.",
-   "En problemas: define la incógnita, plantea la ecuación con los datos y verifica el resultado."
+   "Sumar o restar lo mismo a ambos lados mantiene la igualdad.",
+   "Multiplicar o dividir ambos lados por un número distinto de cero también.",
+   "En una inecuación, al multiplicar o dividir por un número NEGATIVO, el signo se invierte (< pasa a >).",
+   "Una inecuación tiene como solución un conjunto de valores, no uno solo."
   ],
-  "ejemplo": "3x + 5 = 20 → 3x = 15 → x = 5. Y −2x < 6 → x > −3 (el signo se invirtió).",
+  "pasos": [
+   "Reduce términos semejantes en cada lado.",
+   "Pasa los términos con x a un lado y los números al otro (cambian de signo al pasar).",
+   "Divide por el coeficiente de x.",
+   "Comprueba reemplazando en la ecuación original."
+  ],
+  "ej": {
+   "t": "Resuelve −3x + 4 ≥ 13",
+   "pasos": [
+    "Resta 4: −3x ≥ 9.",
+    "Divide por −3 e invierte el signo: x ≤ −3.",
+    "Comprobación con x = −4: −3(−4) + 4 = 16 ≥ 13 ✓.",
+    "Solución: todos los x menores o iguales que −3."
+   ]
+  },
   "error": "Pasar un término al otro lado sin cambiarle el signo, o no invertir la desigualdad al dividir por un negativo."
  },
  "M1-A4": {
+  "idea": "Un sistema de dos ecuaciones busca el par (x, y) que cumple las dos a la vez. Gráficamente es el punto donde se cruzan dos rectas.",
   "claves": [
-   "Sistema 2×2: dos ecuaciones con dos incógnitas; la solución es el par (x, y) que cumple ambas.",
-   "Sustitución: despeja una variable y reemplázala en la otra ecuación.",
-   "Reducción: multiplica las ecuaciones para que una variable tenga coeficientes opuestos y suma."
+   "Sustitución: despeja una variable de una ecuación y reemplázala en la otra.",
+   "Reducción: multiplica las ecuaciones para que una variable quede con coeficientes opuestos y suma.",
+   "La solución es un par (x, y); verifícala en ambas ecuaciones."
   ],
-  "ejemplo": "x + y = 5 y x − y = 1: al sumar, 2x = 6, x = 3 y luego y = 2.",
+  "pasos": [
+   "Elige el método: reducción si los coeficientes se parecen, sustitución si una variable tiene coeficiente 1.",
+   "Elimina una variable y resuelve la otra.",
+   "Reemplaza para encontrar la variable que falta.",
+   "Verifica en las dos ecuaciones."
+  ],
+  "ej": {
+   "t": "Resuelve 2x + 3y = 12 y x − y = 1",
+   "pasos": [
+    "De la 2.ª: x = y + 1.",
+    "En la 1.ª: 2(y + 1) + 3y = 12 → 5y + 2 = 12 → y = 2.",
+    "Entonces x = 3.",
+    "Comprobación: 2·3 + 3·2 = 12 ✓ y 3 − 2 = 1 ✓."
+   ]
+  },
   "error": "Hallar solo x y olvidar calcular y, o no verificar en ambas ecuaciones."
  },
  "M1-A5": {
+  "idea": "Una función asigna a cada x un único valor de y. La función afín f(x) = mx + n es una recta: m dice cuánto cambia y por cada unidad que avanza x, y n es el valor de y cuando x vale 0.",
   "claves": [
-   "Función lineal: f(x) = mx. Afín: f(x) = mx + n.",
-   "m es la pendiente (cuánto sube y por cada 1 que avanza x); n es el corte con el eje y.",
-   "Pendiente entre dos puntos: m = (y₂ − y₁)/(x₂ − x₁)."
+   "Lineal: f(x) = mx (pasa por el origen). Afín: f(x) = mx + n.",
+   "Pendiente: m = (y₂ − y₁)/(x₂ − x₁).",
+   "m > 0 sube, m < 0 baja y m = 0 es horizontal.",
+   "n es el corte con el eje y: el punto (0, n)."
   ],
-  "ejemplo": "Por (1, 3) y (3, 7): m = (7−3)/(3−1) = 2; n = 3 − 2·1 = 1; f(x) = 2x + 1.",
-  "error": "Restar en distinto orden el numerador y el denominador."
+  "pasos": [
+   "Si te dan dos puntos, calcula m.",
+   "Reemplaza un punto en y = mx + n para hallar n.",
+   "Escribe la función y comprueba con el otro punto.",
+   "En problemas, m es la tasa de cambio (por hora, por kg…) y n el valor inicial."
+  ],
+  "ej": {
+   "t": "Un plan cuesta $5.000 fijos más $200 por GB. Escribe la función.",
+   "pasos": [
+    "El fijo es n = 5.000 y la tasa es m = 200 por GB.",
+    "f(x) = 200x + 5.000, con x en GB.",
+    "Con 10 GB: f(10) = 2.000 + 5.000 = 7.000."
+   ]
+  },
+  "error": "Restar en distinto orden el numerador y el denominador al calcular la pendiente."
  },
  "M1-A6": {
+  "idea": "La función cuadrática f(x) = ax² + bx + c dibuja una parábola. Resolver ax² + bx + c = 0 es encontrar dónde la parábola corta el eje x.",
   "claves": [
-   "Ecuación ax² + bx + c = 0: factoriza o usa x = (−b ± √(b² − 4ac)) / 2a.",
-   "La gráfica es una parábola: abre hacia arriba si a > 0 y hacia abajo si a < 0.",
-   "Vértice: x = −b/(2a). Corte con el eje y: (0, c). Ceros: las soluciones de la ecuación."
+   "Fórmula general: x = (−b ± √(b² − 4ac)) / (2a).",
+   "Discriminante Δ = b² − 4ac: Δ > 0 dos soluciones, Δ = 0 una, Δ < 0 ninguna real.",
+   "Vértice: x = −b/(2a); se reemplaza en f para hallar y.",
+   "Si a > 0 abre hacia arriba (el vértice es un mínimo); si a < 0, hacia abajo.",
+   "Corta el eje y en (0, c)."
   ],
-  "ejemplo": "y = x² − 4x + 3: ceros 1 y 3; vértice en x = 2, y = 4 − 8 + 3 = −1, es decir (2, −1).",
+  "pasos": [
+   "Identifica a, b y c con sus signos.",
+   "Intenta factorizar; si no se puede, usa la fórmula general.",
+   "Para el gráfico: calcula ceros, vértice y corte con y.",
+   "Une los puntos con una parábola simétrica respecto de la recta vertical del vértice."
+  ],
+  "ej": {
+   "t": "Resuelve x² − 5x + 6 = 0",
+   "pasos": [
+    "a = 1, b = −5, c = 6.",
+    "Δ = 25 − 24 = 1.",
+    "x = (5 ± 1)/2, es decir x = 3 o x = 2.",
+    "Comprobación: 3² − 15 + 6 = 0 ✓."
+   ]
+  },
   "error": "Olvidar el signo de b al calcular −b/(2a)."
  },
  "M1-G1": {
+  "idea": "Aquí trabajas con medidas de figuras planas: cuánto mide su borde (perímetro) y cuánta superficie cubren (área). Pitágoras relaciona los lados de un triángulo rectángulo.",
   "claves": [
-   "Pitágoras (triángulo rectángulo): a² + b² = c², con c la hipotenusa.",
-   "Áreas: triángulo b·h/2; paralelogramo b·h; trapecio (B+b)·h/2; círculo π·r².",
-   "Perímetro del círculo: 2π·r."
+   "Pitágoras: a² + b² = c² (c es la hipotenusa, el lado opuesto al ángulo recto).",
+   "Triángulo: A = b·h/2. Paralelogramo: A = b·h. Trapecio: A = (B + b)·h/2.",
+   "Círculo: A = π·r² y perímetro = 2π·r.",
+   "La altura es perpendicular a la base."
   ],
-  "ejemplo": "Catetos 6 y 8: c = √(36 + 64) = 10.",
+  "pasos": [
+   "Dibuja la figura y marca los datos.",
+   "Identifica si hay un triángulo rectángulo (Pitágoras).",
+   "Elige la fórmula y reemplaza.",
+   "Revisa las unidades: longitud en cm, área en cm²."
+  ],
+  "ej": {
+   "t": "Un trapecio tiene bases 10 y 6 y altura 4. ¿Área?",
+   "pasos": [
+    "A = (B + b)·h/2.",
+    "A = (10 + 6)·4/2 = 16·4/2 = 32.",
+    "Resultado: 32 cm²."
+   ]
+  },
   "error": "Usar el lado inclinado como altura en vez de la perpendicular."
  },
  "M1-G2": {
+  "idea": "Los cuerpos geométricos ocupan espacio. Su área es la cantidad de «papel» necesaria para forrarlos; su volumen es cuánto contienen por dentro.",
   "claves": [
-   "Cubo de arista a: área total 6a², volumen a³.",
-   "Paralelepípedo a×b×c: volumen a·b·c; área total 2(ab + bc + ac).",
-   "Cilindro: volumen π·r²·h; área total 2π·r·(r + h)."
+   "Cubo: A = 6a² y V = a³.",
+   "Paralelepípedo: V = largo·ancho·alto y A = 2(lw + lh + wh).",
+   "Cilindro: V = π·r²·h y A = 2π·r² + 2π·r·h.",
+   "1 m³ = 1000 litros y 1 cm³ = 1 mL."
   ],
-  "ejemplo": "Cilindro con r = 3 y h = 5: V = π·9·5 = 45π.",
+  "pasos": [
+   "Identifica el cuerpo y sus medidas (usa el radio, no el diámetro).",
+   "Decide si piden área (superficie) o volumen (capacidad).",
+   "Reemplaza en la fórmula y calcula.",
+   "Escribe la unidad correcta (cm² o cm³)."
+  ],
+  "ej": {
+   "t": "Cilindro de radio 2 cm y altura 10 cm. ¿Volumen?",
+   "pasos": [
+    "V = π·r²·h.",
+    "r² = 4, entonces V = π·4·10 = 40π.",
+    "Aproximado: 40·3,14 = 125,6 cm³."
+   ]
+  },
   "error": "Confundir área (cm²) con volumen (cm³), o usar el diámetro como radio."
  },
  "M1-G3": {
+  "idea": "Una transformación isométrica mueve una figura sin cambiar su forma ni su tamaño: trasladar es deslizar, reflejar es hacer un espejo y rotar es girar.",
   "claves": [
    "Traslación con vector (a, b): (x, y) → (x + a, y + b).",
-   "Reflexión respecto al eje x: (x, y) → (x, −y); respecto al eje y: (x, y) → (−x, y).",
-   "Rotación de 90° antihoraria con centro en el origen: (x, y) → (−y, x); de 180°: (x, y) → (−x, −y)."
+   "Reflexión en el eje x: (x, y) → (x, −y). En el eje y: (x, y) → (−x, y).",
+   "Rotación de 90° antihoraria (centro en el origen): (x, y) → (−y, x). De 180°: (x, y) → (−x, −y).",
+   "Las longitudes y los ángulos no cambian."
   ],
-  "ejemplo": "(2, 3) rotado 90° antihorario → (−3, 2).",
+  "pasos": [
+   "Ubica el punto en el plano.",
+   "Aplica la regla a cada coordenada.",
+   "Dibuja la imagen para comprobar que tiene sentido.",
+   "Si es una figura, transforma cada vértice."
+  ],
+  "ej": {
+   "t": "Triángulo A(1,1), B(3,1), C(1,4) trasladado con el vector (2, −3)",
+   "pasos": [
+    "A' = (3, −2).",
+    "B' = (5, −2).",
+    "C' = (3, 1).",
+    "Cada punto se mueve igual, por eso la figura no cambia."
+   ]
+  },
   "error": "Cambiar el signo de la coordenada equivocada en una reflexión."
  },
  "M1-G4": {
+  "idea": "Dos figuras son semejantes si tienen la misma forma y distinto tamaño: sus ángulos son iguales y sus lados, proporcionales. Los mapas y planos son aplicaciones de la semejanza.",
   "claves": [
-   "Figuras semejantes: ángulos iguales y lados proporcionales con razón k.",
-   "Longitudes se multiplican por k; áreas por k²; volúmenes por k³.",
-   "Escala 1:n: 1 unidad en el plano representa n unidades reales."
+   "Razón de semejanza k = lado nuevo / lado original.",
+   "Longitudes × k ; áreas × k² ; volúmenes × k³.",
+   "Escala 1:n: 1 cm en el plano son n cm reales.",
+   "En triángulos semejantes, los lados correspondientes son proporcionales."
   ],
-  "ejemplo": "Escala 1:50.000: 4 cm en el mapa son 200.000 cm = 2 km reales.",
-  "error": "Multiplicar las áreas por k en lugar de k²."
+  "pasos": [
+   "Identifica qué lados se corresponden.",
+   "Plantea la proporción con una incógnita.",
+   "Resuelve multiplicando en cruz.",
+   "Convierte las unidades al final."
+  ],
+  "ej": {
+   "t": "Una maqueta a escala 1:200 muestra un edificio de 15 cm de alto. ¿Altura real?",
+   "pasos": [
+    "Real = 15·200 = 3.000 cm.",
+    "3.000 cm = 30 m."
+   ]
+  },
+  "error": "Multiplicar las áreas por k en lugar de por k²."
  },
  "M1-P1": {
+  "idea": "Organizar datos en tablas y gráficos permite ver patrones. El promedio resume un conjunto de datos en un solo valor típico.",
   "claves": [
-   "Frecuencia absoluta: cuántas veces aparece un dato. Relativa: absoluta/total (por 100 si quieres porcentaje).",
-   "Promedio: suma de los datos dividida por la cantidad de datos.",
-   "Mediana: dato central de los datos ordenados; con cantidad par, promedio de los dos centrales."
+   "Frecuencia absoluta: cuántas veces aparece un dato. Relativa = absoluta / total.",
+   "Promedio = suma de los datos / cantidad de datos.",
+   "Mediana: valor central de los datos ordenados. Moda: el que más se repite.",
+   "Gráficos: barras (categorías), circular (partes de un todo), líneas (evolución)."
   ],
-  "ejemplo": "Datos 2, 4, 9: promedio 5; mediana 4.",
+  "pasos": [
+   "Ordena los datos si necesitas la mediana.",
+   "Arma la tabla con las frecuencias.",
+   "Calcula promedio, mediana o moda según lo pedido.",
+   "Interpreta el resultado en el contexto."
+  ],
+  "ej": {
+   "t": "Notas: 5, 7, 7, 4, 6",
+   "pasos": [
+    "Promedio = (5+7+7+4+6)/5 = 29/5 = 5,8.",
+    "Ordenadas: 4, 5, 6, 7, 7, entonces la mediana es 6.",
+    "Moda = 7."
+   ]
+  },
   "error": "Calcular la mediana sin ordenar los datos."
  },
  "M1-P2": {
+  "idea": "Las medidas de posición indican en qué lugar de los datos ordenados está un valor. Los cuartiles dividen los datos en cuatro grupos iguales y el diagrama de cajón los muestra.",
   "claves": [
-   "Los cuartiles Q1, Q2 (mediana) y Q3 dividen los datos ordenados en cuatro partes.",
-   "Percentil p: valor bajo el cual queda aproximadamente p% de los datos.",
-   "Diagrama de cajón: caja de Q1 a Q3 con la mediana dentro; rango intercuartil = Q3 − Q1."
+   "Q1 deja 25% de los datos por debajo; Q2 es la mediana (50%); Q3 deja 75%.",
+   "Percentil p: deja p% de los datos por debajo.",
+   "Rango intercuartil = Q3 − Q1.",
+   "Diagrama de cajón: la caja va de Q1 a Q3, la línea interior es la mediana y los bigotes llegan al mínimo y al máximo."
   ],
-  "ejemplo": "Q1 = 12 y Q3 = 20: el rango intercuartil es 8.",
+  "pasos": [
+   "Ordena los datos.",
+   "Ubica la mediana (Q2).",
+   "Q1 es la mediana de la mitad inferior y Q3 la de la mitad superior.",
+   "Interpreta: la caja contiene el 50% central de los datos."
+  ],
+  "ej": {
+   "t": "Datos 2, 4, 6, 8, 10, 12, 14 (con este método simple; algunos textos usan variantes)",
+   "pasos": [
+    "Mediana (Q2) = 8.",
+    "Mitad inferior 2, 4, 6: Q1 = 4. Mitad superior 10, 12, 14: Q3 = 12.",
+    "Rango intercuartil = 12 − 4 = 8."
+   ]
+  },
   "error": "Confundir el rango (máximo − mínimo) con el rango intercuartil."
  },
  "M1-P3": {
+  "idea": "La probabilidad mide qué tan posible es que ocurra un suceso, de 0 (imposible) a 1 (seguro).",
   "claves": [
-   "Probabilidad = casos favorables / casos posibles (sucesos equiprobables).",
+   "P(A) = casos favorables / casos posibles (si todos son igual de probables).",
+   "Complemento: P(no A) = 1 − P(A).",
    "Regla aditiva: P(A o B) = P(A) + P(B) − P(A y B).",
-   "Regla multiplicativa para sucesos independientes: P(A y B) = P(A)·P(B)."
+   "Sucesos independientes: P(A y B) = P(A)·P(B)."
   ],
-  "ejemplo": "Dado: P(par) = 3/6 = 1/2.",
+  "pasos": [
+   "Define el experimento y los casos posibles.",
+   "Cuenta los casos favorables.",
+   "Decide si es «o» (se suma) o «y» (se multiplica).",
+   "Verifica que el resultado esté entre 0 y 1."
+  ],
+  "ej": {
+   "t": "Se lanza un dado. ¿P(par o mayor que 4)?",
+   "pasos": [
+    "Pares: 2, 4, 6. Mayores que 4: 5, 6.",
+    "Unión: 2, 4, 5, 6, que son 4 casos.",
+    "P = 4/6 = 2/3.",
+    "Con la regla: 3/6 + 2/6 − 1/6 = 4/6 ✓ (el 6 está en ambos grupos)."
+   ]
+  },
   "error": "Sumar probabilidades de sucesos no excluyentes sin restar la intersección."
  },
  "M2-N1": {
+  "idea": "Los números reales incluyen todos los que puedes ubicar en la recta numérica: enteros, fracciones y también irracionales como √2 o π, que no se pueden escribir como fracción.",
   "claves": [
-   "Los reales incluyen racionales e irracionales (como √2 y π).",
-   "Propiedades: √a·√b = √(ab); √(a²·b) = a√b.",
-   "Racionalizar: multiplica numerador y denominador por la raíz del denominador."
+   "√a · √b = √(a·b) ; √a / √b = √(a/b).",
+   "√(a²·b) = a·√b (sacar cuadrados perfectos).",
+   "Racionalizar: 1/√a = √a / a.",
+   "√(a + b) NO es √a + √b."
   ],
-  "ejemplo": "√72 = √(36·2) = 6√2.",
+  "pasos": [
+   "Descompón la cantidad subradical en factores o cuadrados perfectos.",
+   "Saca de la raíz los cuadrados perfectos.",
+   "Suma términos con la misma raíz: 3√2 + 5√2 = 8√2.",
+   "Si hay raíz en el denominador, racionaliza."
+  ],
+  "ej": {
+   "t": "Simplifica √50 + √8",
+   "pasos": [
+    "√50 = √(25·2) = 5√2.",
+    "√8 = √(4·2) = 2√2.",
+    "5√2 + 2√2 = 7√2."
+   ]
+  },
   "error": "Escribir √(a + b) = √a + √b, que es falso."
  },
  "M2-N2": {
+  "idea": "En finanzas el dinero cambia con el tiempo por el interés, que es como el «arriendo» del dinero. Hay interés simple (siempre sobre el capital inicial) e interés compuesto (el interés genera más interés).",
   "claves": [
-   "Interés simple: I = C·r·t (solo sobre el capital inicial).",
-   "Interés compuesto: C final = C·(1 + r)^n; el interés se calcula sobre el total acumulado.",
-   "La tasa y el plazo deben estar en la misma unidad de tiempo (mensual con meses, anual con años)."
+   "Interés simple: I = C·r·t y total = C + I.",
+   "Interés compuesto: Cf = C·(1 + r)^n.",
+   "La tasa y el tiempo deben estar en la misma unidad (anual con años, mensual con meses).",
+   "AFP: parte del sueldo se ahorra cada mes y se invierte; el total depende de los aportes, el tiempo y la rentabilidad."
   ],
-  "ejemplo": "$1.000.000 al 10% anual por 2 años (compuesto): 1.000.000·1,1² = $1.210.000.",
-  "error": "Usar interés simple cuando el enunciado es compuesto."
+  "pasos": [
+   "Identifica capital (C), tasa (r) y tiempo (t o n).",
+   "Decide si es simple o compuesto según el enunciado.",
+   "Convierte la tasa a decimal (5% = 0,05).",
+   "Reemplaza, calcula y revisa unidades."
+  ],
+  "ej": {
+   "t": "$500.000 al 2% mensual, compuesto, por 3 meses",
+   "pasos": [
+    "Factor mensual: 1,02.",
+    "1,02³ = 1,061208.",
+    "500.000 · 1,061208 ≈ 530.604.",
+    "Ganancia ≈ 30.604; con interés simple serían 30.000."
+   ]
+  },
+  "error": "Usar interés simple cuando el enunciado dice compuesto, o mezclar tasa anual con tiempo en meses."
  },
  "M2-N3": {
+  "idea": "Un logaritmo responde: ¿a qué exponente debo elevar la base para obtener este número? Es la operación inversa de la potencia.",
   "claves": [
-   "log_b(x) = k significa b^k = x (con b > 0, b ≠ 1 y x > 0).",
-   "log(a·c) = log a + log c; log(a/c) = log a − log c; log(a^n) = n·log a.",
-   "log_b(1) = 0 y log_b(b) = 1."
+   "log_b(x) = k equivale a b^k = x.",
+   "log(a·c) = log a + log c ; log(a/c) = log a − log c.",
+   "log(a^n) = n·log a.",
+   "log_b(1) = 0 y log_b(b) = 1.",
+   "Si no se indica base, suele ser 10."
   ],
-  "ejemplo": "log₂(8) = 3 porque 2³ = 8.",
+  "pasos": [
+   "Traduce el logaritmo a potencia (o al revés).",
+   "Aplica las propiedades para juntar o separar.",
+   "Para resolver, deja el logaritmo solo y pasa a potencia.",
+   "Verifica que el argumento sea positivo."
+  ],
+  "ej": {
+   "t": "Resuelve log₂(x) + log₂(x − 2) = 3",
+   "pasos": [
+    "Junta: log₂[x(x − 2)] = 3.",
+    "Pasa a potencia: x(x − 2) = 2³ = 8.",
+    "x² − 2x − 8 = 0, es decir (x − 4)(x + 2) = 0, así que x = 4 o x = −2.",
+    "x = −2 no sirve (argumento negativo). Respuesta: x = 4."
+   ]
+  },
   "error": "Escribir log(a + c) = log a + log c."
  },
  "M2-A1": {
+  "idea": "Un sistema 2×2 puede tener tres resultados según cómo se relacionen las dos rectas: se cruzan en un punto, son paralelas (nunca se cruzan) o son la misma recta.",
   "claves": [
-   "Un sistema 2×2 puede tener solución única, ninguna o infinitas.",
-   "Rectas con distinta pendiente: se cortan en un punto (solución única).",
-   "Misma pendiente: si son la misma recta, infinitas soluciones; si son paralelas distintas, ninguna."
+   "Una solución: las rectas tienen distinta pendiente.",
+   "Ninguna solución: misma pendiente y distinta ubicación (paralelas).",
+   "Infinitas soluciones: son la misma recta; una ecuación es múltiplo de la otra.",
+   "Para ax + by = c y a'x + b'y = c', compara a/a', b/b' y c/c'."
   ],
-  "ejemplo": "x + 2y = 3 y 2x + 4y = 6: la segunda es el doble de la primera, infinitas soluciones. Con 2x + 4y = 7, ninguna.",
+  "pasos": [
+   "Compara los coeficientes de x y de y entre las dos ecuaciones.",
+   "Si a/a' ≠ b/b': solución única.",
+   "Si a/a' = b/b' ≠ c/c': sin solución.",
+   "Si a/a' = b/b' = c/c': infinitas soluciones."
+  ],
+  "ej": {
+   "t": "x + 2y = 4 y 3x + 6y = 5",
+   "pasos": [
+    "Razones de coeficientes: 1/3 y 2/6 = 1/3 (iguales).",
+    "Términos libres: 4/5, que no es 1/3.",
+    "Misma pendiente y distinta ubicación: sin solución."
+   ]
+  },
   "error": "Concluir «sin solución» cuando los términos libres también son proporcionales."
  },
  "M2-A2": {
+  "idea": "La función exponencial describe crecimientos o decaimientos que se multiplican en cada paso (poblaciones, interés compuesto). La logarítmica es su inversa y describe crecimientos lentos.",
   "claves": [
-   "Exponencial f(x) = a·b^x: crece si b > 1 y decrece si 0 < b < 1; corta el eje y en (0, a).",
-   "Logarítmica f(x) = log_b(x): es la inversa de la exponencial; corta el eje x en (1, 0).",
-   "Potencia f(x) = x^n: su forma depende de si n es par o impar."
+   "f(x) = a·b^x: si b > 1 crece, si 0 < b < 1 decrece; pasa por (0, a).",
+   "f(x) = log_b(x): existe solo para x > 0 y pasa por (1, 0).",
+   "Exponencial y logarítmica son inversas: sus gráficos son simétricos respecto de y = x.",
+   "Potencia f(x) = x^n: con n par parece una parábola abierta hacia arriba; con n impar sube de izquierda a derecha."
   ],
-  "ejemplo": "f(x) = 3·2^x: f(0) = 3 y f(4) = 3·16 = 48.",
+  "pasos": [
+   "Identifica el tipo de función según dónde aparece x (en la base o en el exponente).",
+   "Reemplaza los valores dados.",
+   "En modelos, a es el valor inicial y b el factor de crecimiento por período.",
+   "Comprueba con un punto conocido."
+  ],
+  "ej": {
+   "t": "Una población de 200 individuos se triplica cada año: P(t) = 200·3^t. ¿Cuántos hay a los 2 años?",
+   "pasos": [
+    "P(2) = 200·3².",
+    "3² = 9.",
+    "200·9 = 1.800."
+   ]
+  },
   "error": "Confundir x² (potencia) con 2^x (exponencial)."
  },
  "M2-A3": {
+  "idea": "Seno y coseno describen fenómenos que se repiten (ondas, mareas, ciclos). Sus gráficos son ondas que se repiten cada cierto período.",
   "claves": [
    "y = A·sen(Bx) + k: amplitud |A|, período 2π/B, eje medio y = k.",
-   "El seno parte en 0; el coseno parte en su valor máximo (1).",
-   "Valores notables: sen 30° = 1/2; cos 60° = 1/2; sen 90° = 1; cos 0° = 1."
+   "El seno y el coseno oscilan entre −1 y 1.",
+   "sen(0) = 0 y cos(0) = 1; el coseno es un seno desplazado.",
+   "Valores notables: sen 30° = 1/2, sen 90° = 1, cos 60° = 1/2, cos 180° = −1."
   ],
-  "ejemplo": "y = 2·cos(x) + 1: máximo 3 y mínimo −1.",
+  "pasos": [
+   "Identifica A, B y k en la fórmula.",
+   "Calcula amplitud, período y eje medio.",
+   "Máximo = k + |A| y mínimo = k − |A|.",
+   "Dibuja un ciclo marcando 5 puntos clave."
+  ],
+  "ej": {
+   "t": "y = 3·sen(2x) + 1",
+   "pasos": [
+    "Amplitud 3.",
+    "Período 2π/2 = π.",
+    "Máximo 1 + 3 = 4 y mínimo 1 − 3 = −2."
+   ]
+  },
   "error": "Calcular el período como B/2π en lugar de 2π/B."
  },
  "M2-G1": {
+  "idea": "Una homotecia agranda o reduce una figura desde un punto fijo (el centro), manteniendo su forma. La razón k indica cuántas veces se agranda o se reduce.",
   "claves": [
-   "Homotecia de centro O y razón k: cada punto P va a P' en la recta OP con OP' = k·OP.",
-   "Longitudes × |k|; áreas × k²; si k es negativa, la imagen queda al otro lado del centro.",
+   "P' está en la recta O–P con OP' = |k|·OP.",
+   "Longitudes × |k| ; áreas × k².",
+   "k > 1 agranda; 0 < k < 1 reduce; k < 0 deja la imagen al otro lado del centro.",
    "Con centro en el origen: (x, y) → (kx, ky)."
   ],
-  "ejemplo": "Razón 3 y centro en el origen: (2, −1) → (6, −3).",
-  "error": "Multiplicar el área por k en vez de k²."
+  "pasos": [
+   "Ubica el centro y la razón.",
+   "Multiplica las distancias (o coordenadas) por k.",
+   "Para áreas usa k².",
+   "Verifica que la figura resultante sea semejante a la original."
+  ],
+  "ej": {
+   "t": "Homotecia de centro (0, 0) y razón −2 aplicada al punto (3, −1)",
+   "pasos": [
+    "x: −2·3 = −6.",
+    "y: −2·(−1) = 2.",
+    "Imagen: (−6, 2), al otro lado del origen."
+   ]
+  },
+  "error": "Multiplicar el área por k en vez de por k²."
  },
  "M2-G2": {
+  "idea": "Las razones trigonométricas relacionan los ángulos de un triángulo rectángulo con sus lados. Permiten calcular distancias que no se pueden medir directamente, como la altura de un edificio.",
   "claves": [
-   "En un triángulo rectángulo: sen α = opuesto/hipotenusa; cos α = adyacente/hipotenusa; tan α = opuesto/adyacente.",
-   "Primero identifica cuál cateto es opuesto y cuál adyacente al ángulo.",
-   "Si te falta un lado, usa Pitágoras."
+   "sen α = cateto opuesto / hipotenusa.",
+   "cos α = cateto adyacente / hipotenusa.",
+   "tan α = cateto opuesto / cateto adyacente.",
+   "Opuesto y adyacente dependen del ángulo que elijas; la hipotenusa nunca cambia."
   ],
-  "ejemplo": "Catetos 3 y 4, hipotenusa 5: sen α (opuesto 3) = 3/5.",
+  "pasos": [
+   "Dibuja el triángulo y marca el ángulo α.",
+   "Etiqueta opuesto, adyacente e hipotenusa respecto de α.",
+   "Elige la razón que usa los dos lados que conoces o buscas.",
+   "Despeja la incógnita."
+  ],
+  "ej": {
+   "t": "A 20 m de un árbol, el ángulo de elevación es 45°. ¿Altura del árbol?",
+   "pasos": [
+    "El adyacente es 20 (distancia) y el opuesto es h.",
+    "tan 45° = h/20.",
+    "tan 45° = 1, entonces h = 20 m."
+   ]
+  },
   "error": "Intercambiar opuesto y adyacente al cambiar de ángulo."
  },
  "M2-G3": {
+  "idea": "En una circunferencia, los ángulos y segmentos que parten de un mismo arco o punto se relacionan de forma fija. Esas relaciones permiten calcular medidas sin usar el centro.",
   "claves": [
-   "Ángulo inscrito = la mitad del ángulo del centro que subtiende el mismo arco.",
-   "Cuerdas que se cortan: a·b = c·d (producto de los segmentos de cada una).",
-   "Tangente y secante desde un punto exterior: PT² = PA·PB."
+   "Ángulo inscrito = (ángulo del centro)/2 sobre el mismo arco.",
+   "El ángulo inscrito en una semicircunferencia mide 90°.",
+   "Cuerdas que se cortan: PA·PB = PC·PD.",
+   "Tangente y secante: PT² = PA·PB."
   ],
-  "ejemplo": "Ángulo del centro de 80° → ángulo inscrito de 40°.",
-  "error": "Igualar el ángulo inscrito con el del centro."
+  "pasos": [
+   "Dibuja la circunferencia y rotula los puntos.",
+   "Identifica si hay un ángulo, cuerdas que se cortan o tangente y secante.",
+   "Aplica la relación y despeja.",
+   "Verifica que la medida sea razonable."
+  ],
+  "ej": {
+   "t": "Dos cuerdas se cortan: en una los segmentos miden 6 y 4; en la otra, uno mide 3.",
+   "pasos": [
+    "6·4 = 3·x.",
+    "24 = 3x, entonces x = 8."
+   ]
+  },
+  "error": "Igualar el ángulo inscrito con el ángulo del centro."
  },
  "M2-G4": {
+  "idea": "La esfera es el cuerpo redondo perfecto (una pelota). Todo se calcula con su radio.",
   "claves": [
-   "Volumen de la esfera: V = (4/3)·π·r³.",
-   "Área de la superficie: A = 4π·r².",
-   "Si tienes el diámetro, divídelo por 2 antes de usar las fórmulas."
+   "Volumen: V = (4/3)·π·r³.",
+   "Superficie: A = 4·π·r².",
+   "Si te dan el diámetro, r = d/2.",
+   "Si el radio se duplica, el volumen se multiplica por 8 y el área por 4."
   ],
-  "ejemplo": "r = 3: V = (4/3)·π·27 = 36π; A = 4π·9 = 36π.",
+  "pasos": [
+   "Obtén el radio.",
+   "Elige volumen o superficie.",
+   "Reemplaza; deja π si piden «en términos de π».",
+   "Verifica unidades (cm³ o cm²)."
+  ],
+  "ej": {
+   "t": "Un balón de radio 6 cm: ¿volumen?",
+   "pasos": [
+    "V = (4/3)·π·6³.",
+    "6³ = 216 y (4/3)·216 = 288.",
+    "V = 288π cm³."
+   ]
+  },
   "error": "Usar r² en lugar de r³ en el volumen."
  },
  "M2-G5": {
+  "idea": "Una recta en el plano queda definida por su pendiente (inclinación) y un punto. Comparando pendientes sabes si dos rectas son paralelas, perpendiculares o se cruzan.",
   "claves": [
-   "Recta y = mx + n: pendiente m, corte con el eje y en n.",
-   "Paralelas: igual pendiente. Perpendiculares: m₁·m₂ = −1.",
-   "Recta por (x₀, y₀) con pendiente m: y − y₀ = m(x − x₀)."
+   "y = mx + n: m es la pendiente y n el corte con el eje y.",
+   "Paralelas: m₁ = m₂.",
+   "Perpendiculares: m₁·m₂ = −1.",
+   "Recta por (x₀, y₀) con pendiente m: y − y₀ = m(x − x₀).",
+   "Pendiente por dos puntos: m = (y₂ − y₁)/(x₂ − x₁)."
   ],
-  "ejemplo": "Perpendicular a una recta de pendiente 2: m = −1/2.",
-  "error": "Tomar el recíproco sin cambiar el signo."
+  "pasos": [
+   "Obtén la pendiente de la recta dada.",
+   "Usa la misma pendiente (paralela) o su opuesto recíproco (perpendicular).",
+   "Con el punto, halla n o usa la forma punto-pendiente.",
+   "Comprueba que el punto cumple la ecuación."
+  ],
+  "ej": {
+   "t": "Recta perpendicular a y = 2x + 1 que pasa por (4, 3)",
+   "pasos": [
+    "m₁ = 2, así que m₂ = −1/2.",
+    "y − 3 = −1/2 (x − 4).",
+    "y = −x/2 + 2 + 3 = −x/2 + 5.",
+    "Comprobación: −4/2 + 5 = 3 ✓."
+   ]
+  },
+  "error": "Tomar el recíproco de la pendiente sin cambiar el signo."
  },
  "M2-P1": {
+  "idea": "La dispersión mide qué tan separados están los datos entre sí. Dos grupos pueden tener el mismo promedio y ser muy distintos: uno muy parejo y otro muy variable.",
   "claves": [
    "Rango = máximo − mínimo.",
-   "Varianza = promedio de los cuadrados de las diferencias respecto a la media.",
-   "Desviación estándar = raíz de la varianza; mide qué tan lejos están los datos del promedio."
+   "Varianza = promedio de (dato − media)².",
+   "Desviación estándar = √varianza (en las mismas unidades que los datos).",
+   "Mayor desviación significa datos más dispersos."
   ],
-  "ejemplo": "Datos 4, 6, 8: media 6; diferencias −2, 0, 2; varianza (4 + 0 + 4)/3 = 8/3.",
-  "error": "Olvidar elevar al cuadrado las diferencias."
+  "pasos": [
+   "Calcula la media.",
+   "Resta la media a cada dato y eleva al cuadrado.",
+   "Promedia esos cuadrados (varianza).",
+   "Saca la raíz cuadrada para la desviación estándar."
+  ],
+  "ej": {
+   "t": "Datos 2, 4, 6 (varianza poblacional)",
+   "pasos": [
+    "Media = 4.",
+    "Diferencias −2, 0, 2; cuadrados 4, 0, 4.",
+    "Varianza = 8/3 ≈ 2,67.",
+    "Desviación estándar ≈ 1,63."
+   ]
+  },
+  "error": "Olvidar elevar al cuadrado las diferencias (la suma de las diferencias siempre da 0)."
  },
  "M2-P2": {
+  "idea": "La probabilidad condicional es la probabilidad de un suceso cuando ya sabes que ocurrió otro. La información nueva reduce los casos posibles.",
   "claves": [
-   "P(A | B) = P(A ∩ B)/P(B): probabilidad de A sabiendo que ya ocurrió B.",
-   "Sin reposición, las extracciones son dependientes: la segunda cambia según la primera.",
-   "Regla multiplicativa general: P(A ∩ B) = P(B)·P(A | B)."
+   "P(A | B) = P(A ∩ B) / P(B).",
+   "P(A ∩ B) = P(B)·P(A | B).",
+   "Sin reposición, los sucesos son dependientes.",
+   "Si A y B son independientes, P(A | B) = P(A)."
   ],
-  "ejemplo": "Urna con 5 rojas y 5 azules, sin reposición: P(2 rojas) = 5/10 · 4/9 = 2/9.",
-  "error": "Multiplicar las probabilidades como si fueran independientes cuando no lo son."
+  "pasos": [
+   "Identifica qué ya ocurrió (la condición B).",
+   "Reduce el universo a los casos de B.",
+   "Cuenta o calcula cuántos de esos cumplen A.",
+   "En extracciones sucesivas, actualiza la cantidad que queda."
+  ],
+  "ej": {
+   "t": "En un curso de 30, 12 son mujeres y 5 de ellas usan lentes. ¿P(usa lentes si es mujer)?",
+   "pasos": [
+    "La condición es «mujer»: 12 casos.",
+    "Favorables: 5.",
+    "P = 5/12."
+   ]
+  },
+  "error": "Multiplicar probabilidades como si fueran independientes cuando no lo son."
  },
  "M2-P3": {
+  "idea": "La combinatoria cuenta de cuántas maneras se pueden ordenar o elegir elementos, sin tener que listar todas las posibilidades.",
   "claves": [
+   "Principio multiplicativo: m formas de hacer una cosa y n de otra dan m·n en total.",
    "Permutaciones de n objetos distintos: n!.",
-   "Si el orden importa y eliges k de n: P(n,k) = n!/(n−k)!.",
-   "Si el orden no importa: C(n,k) = n!/(k!·(n−k)!)."
+   "Si el orden importa: P(n,k) = n!/(n−k)!.",
+   "Si el orden no importa: C(n,k) = n!/(k!(n−k)!)."
   ],
-  "ejemplo": "C(5,2) = 5!/(2!·3!) = 10.",
+  "pasos": [
+   "Pregúntate: ¿importa el orden?",
+   "Si importa, es permutación; si no, combinación.",
+   "Reemplaza n y k.",
+   "Simplifica los factoriales antes de multiplicar."
+  ],
+  "ej": {
+   "t": "Elegir 2 delegados entre 5, sin cargos",
+   "pasos": [
+    "El orden no importa, así que es C(5,2).",
+    "C(5,2) = 5!/(2!·3!) = 120/(2·6) = 10."
+   ]
+  },
   "error": "Usar permutación cuando el orden no importa."
  },
  "M2-P4": {
+  "idea": "Los modelos probabilísticos describen situaciones repetidas. La binomial cuenta éxitos en n intentos independientes; la normal es la campana que describe muchas medidas naturales.",
   "claves": [
-   "Binomial: n ensayos independientes con probabilidad p; P(X = k) = C(n,k)·p^k·(1−p)^(n−k); media n·p.",
-   "Normal N(μ, σ): estandariza con z = (x − μ)/σ.",
-   "Regla empírica: ≈68% a 1σ, ≈95% a 2σ y ≈99,7% a 3σ de la media."
+   "Binomial: P(X = k) = C(n,k)·p^k·(1−p)^(n−k) ; media = n·p.",
+   "Normal N(μ, σ): simétrica alrededor de μ.",
+   "Estandarizar: z = (x − μ)/σ.",
+   "Regla empírica: 68%, 95% y 99,7% a 1, 2 y 3 desviaciones de la media."
   ],
-  "ejemplo": "N(100, 15) y x = 130: z = 30/15 = 2.",
-  "error": "Dividir por la varianza en vez de la desviación estándar al calcular z."
+  "pasos": [
+   "Decide si es binomial (éxito o fracaso repetido) o normal (medida continua).",
+   "Binomial: identifica n, p y k.",
+   "Normal: estandariza para ubicarte en la campana.",
+   "Interpreta en el contexto."
+  ],
+  "ej": {
+   "t": "Se lanza 4 veces una moneda justa: ¿P(exactamente 3 caras)?",
+   "pasos": [
+    "n = 4, k = 3, p = 1/2.",
+    "C(4,3) = 4.",
+    "(1/2)³·(1/2)¹ = 1/16.",
+    "P = 4/16 = 1/4."
+   ]
+  },
+  "error": "Dividir por la varianza en vez de la desviación estándar al estandarizar."
  }
 }
